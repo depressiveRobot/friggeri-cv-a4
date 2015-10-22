@@ -1,12 +1,11 @@
 # About
 
-Fork of the fancy [Friggeri CV](http://www.latextemplates.com/template/friggeri-resume-cv) from Adrien Friggeri changed to render in A4 paper format. There is also a new option `nocolors` to disable use of colors in section headers.
+Fork of the ShareLateX version of the [Friggeri CV](https://www.sharelatex.com/templates/cv-or-resume/fancy-cv) from Adrien Friggeri changed to render in A4 paper format. There is also a new option `nocolors` to disable use of colors in section headers.
 
 ![](samples/cv.png?raw=true)
 
 You need
 
-* Helvetica (Neue),
 * TikZ,
 * XeTex,
 * fontspec
