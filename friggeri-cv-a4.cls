@@ -329,8 +329,9 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 
 \newcommand{\printbibsection}[2]{
   \begin{refsection}
+    \newrefcontext[sorting=chronological]%
     \nocite{*}
-    \printbibliography[sorting=chronological, type={#1}, title={#2}, heading=bibheading]
+    \printbibliography[type={#1}, title={#2}, heading=bibheading]
   \end{refsection}
 }
 
