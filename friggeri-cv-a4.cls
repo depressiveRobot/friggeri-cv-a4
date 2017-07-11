@@ -103,6 +103,13 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
+    \node [circle,draw, anchor=west, minimum size=3.5cm, 
+      path picture={ 
+        \node[anchor=center] at (path picture bounding box.center){
+          \includegraphics[width=3.5cm]{profile_photo.png}
+        }; 
+      }
+    ] (photo) at ([shift={(box.west)}] 1:1.7 ){}; 
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
