@@ -3,9 +3,13 @@
 
 \DeclareOption{nocolors}{\def\@cv@nocolors{}}
 \DeclareOption{print}{\def\@cv@print{}}
+\newif\if@cv@profilephoto\@cv@profilephotofalse  
+\DeclareOption{profilephoto}{\@cv@profilephototrue} 
+
 \DeclareOption*{%
   \PassOptionsToClass{\CurrentOption}{article}%
 }
+
 \ProcessOptions\relax
 \LoadClass{article}
 
@@ -103,13 +107,15 @@ BoldItalicFont=texgyreheros-bolditalic.otf
 \newcommand{\header}[3]{%
   \begin{tikzpicture}[remember picture,overlay]
     \node [rectangle, fill=fillheader, anchor=north, minimum width=\paperwidth, minimum height=4cm] (box) at (current page.north){};
-    \node [circle,draw, anchor=west, minimum size=3.5cm, 
-      path picture={ 
-        \node[anchor=center] at (path picture bounding box.center){
-          \includegraphics[width=3.5cm]{profile_photo.png}
-        }; 
-      }
-    ] (photo) at ([shift={(box.west)}] 1:1.7 ){}; 
+    \if@cv@profilephoto 
+      \node [circle,draw, anchor=west, minimum size=3.5cm, 
+        path picture={ 
+          \node[anchor=center] at (path picture bounding box.center){
+            \includegraphics[width=3.5cm]{profile_photo.png}
+          }; 
+        }
+      ] (photo) at ([shift={(box.west)}] 1:1.7 ){}; 
+    \fi
     \node [anchor=center] (name) at (box) {%
       \fontsize{40pt}{72pt}\color{header}%
       {\thinfont #1}{\bodyfont  #2}
