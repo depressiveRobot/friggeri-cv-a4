@@ -228,5 +228,80 @@ Worked in the Nerd Herd and helped to solve computer problems by asking customer
 \printbibsection{report}{research reports} % Print all research reports from the bibliography
 
 %----------------------------------------------------------------------------------------
+\usetikzlibrary{positioning,shapes.arrows, calc}
 
+
+\begin{tikzpicture}
+    [
+        planet/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=4cm},
+        satellite/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=2.5cm}
+    ]
+\node(planet)[draw=blue,planet,fill=blue,circle,text=white,inner sep=.2cm,outer sep=1cm]{Discipline};
+\node(f)[draw=red,fill=red,rotate=90]at(planet.90){};
+ \node(b)[draw=red,fill=red,satellite,anchor=270]at(planet.90){Self Control};
+ \node(c)[draw=brown,fill=red,satellite,anchor=90]at(planet.90){Love};
+ \node(d)[draw=purple,fill=red,satellite,anchor=0]at(planet.90){Obedience};
+ \node(g)[draw=orange,fill=red,satellite,anchor=180]at(planet.90){Trust};
+ \node(g)[draw=green,fill=red,satellite,anchor=45]at(planet.90){Journey};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    [
+        planet/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=4cm},
+        satellite/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=2.5cm}
+    ]
+\node(planet)[draw=blue,planet,fill=blue,circle,text=white,inner sep=.2cm,outer sep=1cm]{Discipline};
+ \node(b)[draw=red,fill=orange,satellite,anchor=270]at(planet.270){Self Control};
+ \node(c)[draw=brown,fill=orange,satellite,anchor=90]at(planet.270){Love};
+ \node(d)[draw=purple,fill=orange,satellite,anchor=0]at(planet.270){Obedience};
+ \node(g)[draw=orange,fill=orange,satellite,anchor=180]at(planet.270){Trust};
+ \node(g)[draw=green,fill=orange,satellite,anchor=45]at(planet.270){Journey};
+
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    [
+        planet/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=4cm},
+        satellite/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=2.5cm}
+    ]
+\node(planet)[draw=blue,planet,fill=blue,circle,text=white,inner sep=.2cm,outer sep=1cm]{Discipline};
+ \node(b)[draw=red,fill=green,satellite,anchor=center]at(planet.180){Self Control};
+ \node(c)[draw=brown,fill=green,satellite,anchor=center]at(planet.0){Love};
+ \node(d)[draw=purple,fill=green,satellite,anchor=center]at(planet.270){Obedience};
+ \node(g)[draw=orange,fill=green,satellite,anchor=center]at(planet.90){Trust};
+ \node(g)[draw=green,fill=green,satellite,anchor=center]at(planet.45){Journey};
+  \node(b)[draw=red,fill=green,satellite,anchor=center]at(planet.135){Self Control};
+ \node(c)[draw=brown,fill=green,satellite,anchor=center]at(planet.315){Love};
+ \node(d)[draw=purple,fill=green,satellite,anchor=center]at(planet.225){Obedience};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    [
+        planet/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=4cm},
+        satellite/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=2.5cm}
+    ]
+\node(planet)[draw=blue,planet,fill=blue,circle,text=white,inner sep=.2cm,outer sep=1cm]{Discipline};
+\node(d)[draw=purple,fill=green,satellite,anchor=center]at($(planet.0) + (1, 0)$){Obedience};
+\node(d)[draw=blue,fill=blue,satellite,anchor=center]at($(planet.0) + (2, 0)$){Obedience};
+\node(d)[draw=orange,fill=orange,satellite,anchor=center]at($(planet.0) + (0, 1)$){Obedience};
+\node(d)[draw=brown,fill=brown,satellite,anchor=center]at($(planet.0) + (0, 2)$){Obedience};
+\node(d)[draw=purple,fill=purple,satellite,anchor=center]at($(planet.0) + (1, 1)$){Obedience};
+ \node(c)[draw=red,fill=red,satellite,anchor=center]at(planet.0){Love};
+\end{tikzpicture}
+
+\begin{tikzpicture}
+    [
+        planet/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=4cm},
+        satellite/.style={circle,text=white,inner sep=.2cm,outer sep=.2cm,minimum width=2.5cm}
+    ]
+\node(planet)[draw=blue,planet,fill=blue,circle,text=white,inner sep=.2cm,outer sep=1cm]{Discipline};
+\node(d)[draw=purple,fill=green,satellite,anchor=center]at($(planet.0) + (1, 0)$){Obedience};
+\node(d)[draw=blue,fill=blue,satellite,anchor=center]at($(planet.0) + (2, 0)$){Obedience};
+\node(d)[draw=orange,fill=orange,satellite,anchor=center]at($(planet.0) + (3, 0)$){Obedience};
+\node(d)[draw=brown,fill=brown,satellite,anchor=center]at($(planet.0) + (4, 0)$){Obedience};
+\node(d)[draw=purple,fill=purple,satellite,anchor=center]at($(planet.0) + (-1, 0)$){Obedience};
+ \node(c)[draw=red,fill=red,satellite,anchor=center]at(planet.0){Love};
+\end{tikzpicture}
+
+ 
 \end{document}
